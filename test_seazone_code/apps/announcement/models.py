@@ -18,6 +18,9 @@ class Announcement(BaseModelFields):
         _("Taxa da plataforma"), max_digits=5, decimal_places=2, default=0
     )
 
+    def __str__(self):
+        return f"{self.immobile.code} - {self.platform_name}"
+
     class Meta:
         verbose_name = _("Anúncio")
         verbose_name_plural = _("Anúncios")

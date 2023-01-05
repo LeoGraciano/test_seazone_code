@@ -1,6 +1,7 @@
 BUSINESS_APPS = [
     'apps.immobile',
     'apps.announcement',
+    'apps.reserve',
 ]
 
 THIRD_APPS = [
