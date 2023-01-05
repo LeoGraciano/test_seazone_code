@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from apps.core.utils.tokens import random_key
 
 
-class immobile(BaseModelFields):
+class Immobile(BaseModelFields):
 
     code = models.CharField(
         _('Código do imóvel'), max_length=8, unique=True,
