@@ -1,5 +1,5 @@
 BUSINESS_APPS = [
-
+    'apps.immobile',
 ]
 
 THIRD_APPS = [
