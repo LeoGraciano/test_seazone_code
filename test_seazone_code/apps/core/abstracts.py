@@ -11,7 +11,7 @@ class DateModelField(models.Model):
         _('Criado em'), auto_now_add=True,
     )
     updated_at = models.DateTimeField(
-        _('Atualizado em'), auto_now=True,
+        _('Atualizado em'), auto_now=True, null=True
     )
 
     class Meta:

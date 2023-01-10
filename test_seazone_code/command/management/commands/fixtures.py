@@ -15,16 +15,40 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('--load', help='Data load', action='store_true')
 
+    def db_delete(self):
+        os.system('find . -path "*/*.sqlite3" -delete')
+
+    def migrate_delete(self):
+        os.system('find . -path "*/migrations/*.py" -not -name "init.py" -delete')
+
+    def migrate_create(self):
+        os.system(
+            'python manage.py makemigrations immobile reserve announcement && python manage.py migrate')
+
     def execute_load(self):
         """Procura pelo arquivo fixtures.txt (que contém as fixtures a serem instaladas)
         e executa o python manage.py loaddata de odas fixtures declaradas no arquivo.
         """
         # Start operation
+        print(
+            '\n', '*********************** remove db sqlite3....  ************************')
+        self.db_delete()
+
+        print(
+            '\n', '*********************** remove old migrate....  ************************')
+        self.migrate_delete()
+
+        print(
+            '\n', '*********************** create migrate ....  ************************')
+        self.migrate_create()
+
         print('\n', '*********************** loading data ....  ************************')
+
         FILE = 'fixtures.txt'
 
         f = open(FILE, 'r')
         name_fixtures = f.readlines()
+
         for n in name_fixtures:
             os.system(f'python manage.py loaddata {n}')
 

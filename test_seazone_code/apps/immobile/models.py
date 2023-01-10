@@ -9,7 +9,7 @@ class Immobile(BaseModelFields):
 
     code = models.CharField(
         _('Código do imóvel'), max_length=8, unique=True,
-        default=random_key
+        default=random_key, db_index=True
     )
 
     limit_guests = models.PositiveSmallIntegerField(

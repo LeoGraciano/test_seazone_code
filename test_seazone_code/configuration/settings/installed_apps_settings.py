@@ -5,7 +5,7 @@ BUSINESS_APPS = [
 ]
 
 THIRD_APPS = [
-
+    'rest_framework',
 ]
 
 DJANGO_APPS = [
