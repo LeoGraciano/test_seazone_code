@@ -14,6 +14,7 @@
 # Environment
 
 file ".env"
+file "env_example"
 
 # START Project
 

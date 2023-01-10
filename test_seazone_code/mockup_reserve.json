@@ -16,7 +16,6 @@
             "check_in": "2023-02-30",
             "check_out": "2023-03-12",
             "price_total": 150.3,
-            "comment": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
             "created_at": "2023-01-10 00:00:0",
             "announcement_id": "72befb28-b620-4c90-8058-bd97aeecb1e9"
         }
@@ -60,7 +59,6 @@
             "check_in": "2023-05-30",
             "check_out": "2023-5-12",
             "price_total": 10000.8,
-            "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus.",
             "created_at": "2023-01-10 00:00:0",
             "announcement_id": "21a78e90-71fa-41aa-8bcf-5cbb97b1ed7b"
         }

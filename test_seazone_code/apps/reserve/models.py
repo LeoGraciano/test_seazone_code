@@ -31,7 +31,7 @@ class Reserve(BaseModelFields):
     )
 
     comment = models.TextField(
-        _("Comentário"), default=""
+        _("Comentário"), default="", null="", blank=True
     )
 
     number_quests = models.PositiveSmallIntegerField(
