@@ -1,1 +1,2 @@
 mockup_immobile
+mockup_announcement

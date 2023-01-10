@@ -23,14 +23,14 @@ class ImmobileViewTestCase(TestCase):
         response = self.client.get(reverse('immobile-list'))
         self.assertEqual(response.status_code, 200)
 
-    def test_haver_code_in_list(self):
+    def test_have_code_in_list(self):
         response = self.client.get(reverse('immobile-list'))
 
         result = response.data['results'][0]
 
         self.assertEqual(result['code'], '12345678')
 
-    def test_haver_url_detail(self):
+    def test_have_url_detail(self):
         response = self.client.get(reverse('immobile-list'))
 
         result = response.data['results'][0]
@@ -41,8 +41,6 @@ class ImmobileViewTestCase(TestCase):
         _ = self.client.get(reverse('immobile-list'))
 
         _result = _.data['results'][0]
-
-        print(_result)
 
         response = self.client.get(
             reverse(

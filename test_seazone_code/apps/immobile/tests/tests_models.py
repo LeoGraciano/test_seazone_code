@@ -44,6 +44,6 @@ class ImmobileTestCase(TestCase):
 
         _.save()
 
-        i = Immobile.objects.first()
+        i = Immobile.objects.get(id=_.id)
 
         self.assertTrue(i.active_at)

@@ -60,8 +60,8 @@ class Command(BaseCommand):
         YES_NO = 'Yes(Y) or No(N)'
 
         def confirm():
-            _confirmation = input(f'{MSG} {YES_NO} ?  ')
-            resp = ['Y', 'Yes']
+            _confirmation = input(f'{MSG} {YES_NO} ?  ').lower()
+            resp = ['y', 'yes', "s", "sim", "ok"]
             return _confirmation in resp
 
         if not confirm():

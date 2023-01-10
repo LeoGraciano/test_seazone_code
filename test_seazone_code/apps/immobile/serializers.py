@@ -6,6 +6,6 @@ class ImmobileSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Immobile
         fields = [
-            "id", 'code', "is_active", 'limit_guests', "qty_bathrooms",
+            "id", 'code', "is_active", "active_at", 'limit_guests', "qty_bathrooms",
             "accept_pet", "cleaning_value", 'url',
         ]
