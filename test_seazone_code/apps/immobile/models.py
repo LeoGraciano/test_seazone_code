@@ -28,6 +28,8 @@ class Immobile(BaseModelFields):
         _("Valor da limpeza"), max_digits=10, decimal_places=2, default=0
     )
 
+    active_at = models.DateTimeField("Ativo em", null=True, editable=False)
+
     def __str__(self):
         active = "Ativo"
         if not self.is_active:

@@ -12,7 +12,8 @@ class ImmobileTestCase(TestCase):
             limit_guests=random.randint(1, 10),
             qty_bathrooms=random.randint(1, 10),
             accept_pet=random.randint(0, 1),
-            cleaning_value=random.randint(1, 100000)
+            cleaning_value=random.randint(1, 100000),
+            is_active=False,
         )
 
         Immobile.objects.create(**data)
@@ -29,8 +30,20 @@ class ImmobileTestCase(TestCase):
 
         self.assertIsNotNone(i.code)
 
-    def test_code_eith(self):
+    def test_not_is_active(self):
 
         i = Immobile.objects.first()
 
-        self.assertEqual(len(i.code), 8)
+        self.assertFalse(i.is_active)
+
+    def test_auto_active_at_in_active(self):
+
+        _ = Immobile.objects.first()
+
+        _.is_active = True
+
+        _.save()
+
+        i = Immobile.objects.first()
+
+        self.assertTrue(i.active_at)

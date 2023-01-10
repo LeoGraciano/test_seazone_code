@@ -1,10 +1,10 @@
 
 from django.urls import include, path
 from rest_framework import routers
-from apps.immobile import views
+from apps.announcement import views
 
 router = routers.DefaultRouter()
-router.register(r'api/v1', views.ImmobileViewSet)
+router.register(r'api/v1', views.AnnouncementViewSet)
 
 
 urlpatterns = [

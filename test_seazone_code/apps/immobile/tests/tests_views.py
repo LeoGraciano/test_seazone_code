@@ -14,7 +14,7 @@ class ImmobileViewTestCase(TestCase):
             limit_guests=random.randint(1, 10),
             qty_bathrooms=random.randint(1, 10),
             accept_pet=random.randint(0, 1),
-            cleaning_value=random.randint(1, 100000)
+            cleaning_value=random.randint(1, 100000),
         )
 
         Immobile.objects.create(**data)
@@ -41,6 +41,8 @@ class ImmobileViewTestCase(TestCase):
         _ = self.client.get(reverse('immobile-list'))
 
         _result = _.data['results'][0]
+
+        print(_result)
 
         response = self.client.get(
             reverse(
