@@ -16,10 +16,14 @@
 file ".env"
 file "env_example"
 
+## Rename env_example (in:Development)
+
+    rename file "env_example" to ".env"
+
 # START Project
 
 python manage.py runserver
 
-## MOCKUP
+## MOCKUP (in:Development)
 
 python manage.py fixtures
